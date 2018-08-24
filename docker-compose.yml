@@ -1,0 +1,9 @@
+version: '3'
+services:
+    grafana:
+        build:
+          context: .
+        volumes:
+            - ./volumes/grafana:/var/lib/grafana
+        ports: 
+            - "3000:3000"

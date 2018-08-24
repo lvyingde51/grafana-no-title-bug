@@ -1,0 +1,19 @@
+# config file version
+apiVersion: 1
+
+# list of datasources that should be deleted from the database
+deleteDatasources:
+  - name: telegraf
+    orgId: 1
+
+
+datasources:
+- name: 'telegraf'
+  type: 'influxdb'
+  access: 'proxy'
+  org_id: 1
+  url: 'http://influxdb:8086'
+  user: 'root'
+  database: 'telegraf'
+  basicAuth: false
+
